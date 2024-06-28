@@ -4,8 +4,8 @@
 
 .post-menu {
   padding-left: 20px;
-  min-width: 200px;
-  max-width: 230px;
+  min-width: 270px;
+  max-width: 270px;
 
   .post-menu-title {
     font-size: $base-font-size * 1.5;
@@ -18,20 +18,22 @@
     ul {
       border-left: 1px solid #e9ecef;
       $indent: calc($base-font-size / 4);
-      $active-bgcolor: #ecebec;
+      //$active-bgcolor: #ecebec;
+      $active-color: #6DA7E3;
 
       @for $i from 2 to 7 {
         .h-h#{$i} {
           padding-inline-start: $indent + ($i - 2) * $base-font-size * 1.3;
           font-size: $base-font-size * 1.1;
-          line-height: 1.4;
+          line-height: 2;
         }
       }
 
       a {
         display: flex;
         padding: 2px 8px;
-        color: darken($text-color, 10%);
+        //color: darken($text-color, 10%);
+        color: #454545;
 
         * {
           pointer-events: none;
@@ -39,22 +41,24 @@
 
         &:hover {
           text-decoration: none;
-          color: lighten($text-color, 20%)!important;
+          //color: lighten($text-color, 20%)!important;
+          color: #6DA7E3;
         }
       }
 
       .active {
-        background-color: $active-bgcolor;
+        //background-color: $active-bgcolor;
+        color: $active-color;
         transition: background 0.5s;
-        border-left: 2px solid #202020;
+        border-left: 2px solid #05BF85;
         margin-left: -2px;
 
         &:hover {
-          background-color: lighten($active-bgcolor, 2%);
+          //background-color: lighten($active-bgcolor, 2%);
         }
 
         a {
-          color: #121416;
+          color: #05BF85;
         }
       }
     }
