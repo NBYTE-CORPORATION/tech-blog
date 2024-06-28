@@ -1,0 +1,72 @@
+{
+    "Post Template": {
+        "prefix": "template",
+        "body": [
+            "---",
+            "layout: post",
+            "title: ",
+            "subtitle: ",
+            "author: ",
+            "categories: ",
+            "tags: [ex1, ex2]",
+            "---",
+            "",
+            "여기에 포스트의 내용을 작성하세요."
+        ],
+        "description": "포스트 템플릿"
+    },
+    "summary": {
+        "prefix": "summary",
+        "body": [
+            ">📌 &nbsp;__요약__  ",
+            "> "
+        ],
+        "description": "reference"
+    },
+    "ref": {
+        "prefix": "ref",
+        "body": [
+            ">💡 __참고__  ",
+            "> "
+        ],
+        "description": "reference"
+    },
+    "img": {
+        "prefix": "img",
+        "body": [
+            "![제목](/posts/날짜/Screenshot_.png \"제목\"){: width=\"100%\"}",
+            "<div style=\"color: gray; text-align: center; margin-bottom: 30px;\">제목</div>"
+        ],
+        "description": "image"
+    },
+    "table": {
+        "prefix": "table",
+        "body": [
+            "<table style=\"width:100%; border-collapse: collapse; table-layout: fixed;\">",
+                "\t<colgroup>",
+                    "\t\t<col style=\"width:40%;\">",
+                    "\t\t<col style=\"width:60%;\">",
+                "\t</colgroup>",
+                "\t<thead>",
+                    "\t\t<tr style=\"background-color:gray;\">",
+                        "\t\t\t<th style=\"text-align:center; border: 1px solid black; word-wrap: break-word;\">컬럼1</th>",
+                        "\t\t\t<th style=\"text-align:center; border: 1px solid black; word-wrap: break-word;\">컬럼2</th>",
+                    "\t\t</tr>",
+                "\t</thead>",
+                "\t<tbody>",
+                    "\t\t<tr>",
+                        "\t\t\t<td style=\"text-align:left; border: 1px solid black; word-wrap: break-word; white-space: normal;\">",
+                        "\t\t\t\t",
+                        "\t\t\t</td>",
+                        "\t\t\t<td style=\"text-align:left; border: 1px solid black; word-wrap: break-word; white-space: normal;\">",
+                        "\t\t\t\t",
+                        "\t\t\t</td>",
+                    "\t\t</tr>",
+                "\t</tbody>",
+            "</table>",
+            "",
+            "<p align=\"center\">▲ </p>"
+        ],
+        "description": "table format"
+    },
+}
