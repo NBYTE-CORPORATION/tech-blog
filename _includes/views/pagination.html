@@ -25,15 +25,16 @@
           {{ post.title | escape }}
         </a>
       </h2>
-      <div class="post-meta">
-        <span class="post-date"><i class="fa fa-calendar"></i> {{ post.date | date: date_format }}</span>
-        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
-      </div>
       <a class="post-excerpt" href="{{ post_url }}">
         <p>
         {{ post.subtitle }} <span class="read_more"></span>
         </p>
       </a>
+      <br>
+      <div class="post-meta">
+        <span class="post-date">{{ post.date | date: date_format }}</span>
+        <span class="left-vsplit">{{ post.author }}</span>
+      </div>
       <div class="post-tags">
         {%- for tag in post.tags -%}
         <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
