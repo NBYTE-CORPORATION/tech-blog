@@ -187,7 +187,7 @@ tags: [servlet, 서블릿, spring, 스프링]
 
 아래 이미지는 위 내용을 도식화한 것이다.
 
-![서블릿 동작 방식](/assets/images/posts/이원모/20240622/Screenshot_1.png "서블릿 동작 방식"){: width="100%"}
+![서블릿 동작 방식](/assets/images/posts/이원모/20240622/Screenshot_1.png "서블릿 동작 방식"){: width="75%"}
 <div style="color: gray; text-align: center; margin-bottom: 30px;">서블릿 동작 방식</div>
 
 <br>
