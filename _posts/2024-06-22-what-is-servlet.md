@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 서블릿이란?
+title: Servlet이란?
 subtitle: 스프링의 핵심 요소 서블릿에 대해 알아봅니다.
 author: 이원모
 categories: Spring
@@ -193,6 +193,7 @@ tags: [servlet, 서블릿, spring, 스프링]
 <br>
 
 ## 장단점
+---
 서블릿의 대표적인 장단점은 다음과 같다.
 
 __장점__

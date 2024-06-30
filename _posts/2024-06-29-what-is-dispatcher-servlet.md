@@ -16,6 +16,7 @@ Dispatcher Servlet은 흔히 프론트 컨트롤러라고도 언급하는데 이
 <br>
 
 ## 특징
+---
 디스패처 서블릿의 주요 특징은 다음과 같습니다.
 
 - 중앙 관리  
@@ -33,6 +34,7 @@ Dispatcher Servlet은 흔히 프론트 컨트롤러라고도 언급하는데 이
 <br>
 
 ## 동작 과정
+---
 디스패처 서블릿의 동작 과정을 단계별로 설명하면 다음과 같습니다.
 
 1. HTTP 요청  
@@ -71,7 +73,7 @@ Dispatcher Servlet은 흔히 프론트 컨트롤러라고도 언급하는데 이
 <br>
 아래 이미지는 위 내용을 도식화한 것입니다.
 
-![디스패처 서블릿 동작 과정](/assets/images/posts/이원모/20240629/Screenshot_1.png "디스패처 서블릿 동작 과정"){: width="70%"}
+![디스패처 서블릿 동작 과정](/assets/images/posts/이원모/20240629/Screenshot_1.png "디스패처 서블릿 동작 과정"){: width="100%"}
 <div style="color: gray; text-align: center; margin-bottom: 30px;">디스패처 서블릿 동작 과정</div>
 
 <br>
