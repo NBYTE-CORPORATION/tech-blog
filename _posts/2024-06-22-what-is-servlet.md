@@ -93,11 +93,13 @@ tags: [servlet, 서블릿, spring, 스프링]
     서블릿 컨테이너는 'init()' 메서드를 호출하여 서블릿을 초기화합니다. 이 메서드는 서블릿이 생성된 후 한 번만 호출되며, 서블릿이 클라이언트 요청을 처리하기 전에 필요한 초기화 작업을 수행한다.
 
     - init() 메서드 정의 예시
+
         ```java
         public void init(ServletConfig config) throws ServletException {
             // 초기화 코드
         }
         ```
+        
     - init() 메서드는 서블릿의 초기화 매개변수를 받아 초기화 작업을 수행한다.  
     <br>
 
@@ -105,12 +107,15 @@ tags: [servlet, 서블릿, spring, 스프링]
     클라이언트 요청이 들어오면 서블릿 컨테이너는 서블릿의 'service()' 메서드를 호출한다. 이 메서드는 클라이언트의 요청을 처리하고, 적절한 응답을 생성한다.
 
     - service() 메서드 정의 예시
+
         ```java
         public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
             // 요청 처리 코드
         }
         ```
+
     - 'service()' 메서드는 HTTP요청 메서드(GET, POST 등)에 따라 'doGet()', 'doPost()' 등의 메서드를 호출한다.
+
         ```java
         protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
             // GET 요청 처리 코드
@@ -120,6 +125,7 @@ tags: [servlet, 서블릿, spring, 스프링]
             // POST 요청 처리 코드
         }
         ```
+
     <br>
 
 5. 서블릿 소멸  
