@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gradle-Wrapper
+title: Gradle-Wrapper에 대해
 subtitle: Gradle-Wrapper 의 종류와 역할을 알아봅시다
 author: 차정우
 categories: Spring
