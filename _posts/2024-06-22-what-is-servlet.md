@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 서블릿이란?
+title: Servlet이란?
 subtitle: 스프링의 핵심 요소 서블릿에 대해 알아봅니다.
 author: 이원모
 categories: Spring
@@ -84,7 +84,7 @@ tags: [servlet, 서블릿, spring, 스프링]
         </servlet-mapping>
         ```
 
-        <load-on-startup> 요소의 값을 양수로 설정하면 서블릿 컨테이너는 서버가 시작될 때 서블릿을 로드하고 초기화합니다. 이 값이 클수록 서블릿이 로드되는 순서가 뒤로 밀리게 된다.
+        요소의 값을 양수로 설정하면 서블릿 컨테이너는 서버가 시작될 때 서블릿을 로드하고 초기화합니다. 이 값이 클수록 서블릿이 로드되는 순서가 뒤로 밀리게 된다.
 
 2. 서블릿 인스턴스 생성  
     서블릿 컨테이너는 로드된 서블릿 클래스의 인스턴스를 생성합니다. 이 단계에서 서블릿 객체가 생성된다.
@@ -93,23 +93,29 @@ tags: [servlet, 서블릿, spring, 스프링]
     서블릿 컨테이너는 'init()' 메서드를 호출하여 서블릿을 초기화합니다. 이 메서드는 서블릿이 생성된 후 한 번만 호출되며, 서블릿이 클라이언트 요청을 처리하기 전에 필요한 초기화 작업을 수행한다.
 
     - init() 메서드 정의 예시
+
         ```java
         public void init(ServletConfig config) throws ServletException {
             // 초기화 코드
         }
         ```
-    - init() 메서드는 서블릿의 초기화 매개변수를 받아 초기화 작업을 수행한다.
+        
+    - init() 메서드는 서블릿의 초기화 매개변수를 받아 초기화 작업을 수행한다.  
+    <br>
 
 4. 요청처리  
     클라이언트 요청이 들어오면 서블릿 컨테이너는 서블릿의 'service()' 메서드를 호출한다. 이 메서드는 클라이언트의 요청을 처리하고, 적절한 응답을 생성한다.
 
     - service() 메서드 정의 예시
+
         ```java
         public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
             // 요청 처리 코드
         }
         ```
+
     - 'service()' 메서드는 HTTP요청 메서드(GET, POST 등)에 따라 'doGet()', 'doPost()' 등의 메서드를 호출한다.
+
         ```java
         protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
             // GET 요청 처리 코드
@@ -120,16 +126,19 @@ tags: [servlet, 서블릿, spring, 스프링]
         }
         ```
 
+    <br>
+
 5. 서블릿 소멸  
     서블릿 컨테이너는 서블릿을 종료하기전 메모리에서 해제할 때 'destroy()' 메서드를 호출하며, 이 메서드는 서블릿이 종료되기 전에 필요한 정리 작업을 수행한다.
 
     - destroy() 메서드 정의 예시
+
         ```java
         public void destroy() {
             // 정리 코드
         }
         ```
-
+    
     근데 서블릿은 언제 소멸될까? 내용은 다음과 같다.
 
     1) 애플리케이션 재배포(재배포 또는 설정변경)  
@@ -146,7 +155,7 @@ tags: [servlet, 서블릿, spring, 스프링]
 
 <br>
 
-> 📌 &nbsp;__요약__  
+> &nbsp;&nbsp;&nbsp;&nbsp;📌 &nbsp;__요약__  
 > - 서블릿 라이프 사이클 전체흐름
 >   1. 서블릿 클래스 로딩
 >   2. 서블릿 인스턴스 생성
@@ -187,12 +196,13 @@ tags: [servlet, 서블릿, spring, 스프링]
 
 아래 이미지는 위 내용을 도식화한 것이다.
 
-![서블릿 동작 방식](/assets/images/posts/이원모/20240622/Screenshot_1.png "서블릿 동작 방식"){: width="100%"}
+![서블릿 동작 방식](/assets/images/posts/이원모/20240622/Screenshot_1.png "서블릿 동작 방식"){: width="75%"}
 <div style="color: gray; text-align: center; margin-bottom: 30px;">서블릿 동작 방식</div>
 
 <br>
 
 ## 장단점
+---
 서블릿의 대표적인 장단점은 다음과 같다.
 
 __장점__

@@ -192,7 +192,7 @@ html[data-theme="dark"]  {
 
   .post-menu {
     .post-menu-title {
-      color: #ddd;
+      color: #BBBBBB;
     }
 
     .post-menu-content {
@@ -200,8 +200,14 @@ html[data-theme="dark"]  {
         border-left: 1px solid #787878;
 
         .active {
-          background-color: #2d2d2d;
-          border-left: 2px solid #aaa;
+          color: #6DA7E3;
+          //background-color: #2d2d2d;
+          border-left: 2px solid #6DA7E3;
+        }
+
+        .active a {
+          color: #6DA7E3;
+          //background-color: #2d2d2d;
         }
 
         a {
@@ -209,7 +215,7 @@ html[data-theme="dark"]  {
         }
 
         a:hover {
-          color: #fff !important;
+          color: #6DA7E3 !important;
         }
       }
     }
