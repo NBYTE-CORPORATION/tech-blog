@@ -7,7 +7,7 @@ categories: Spring
 tags: [Spring, Springboot, Repository, DAO]
 ---
 
-## 필요한 기초 지식
+## DAO 와 Repository 비교를 위한 기초지식
 
 **ORM(Object Relational Mapping)**<br>
  - 관계형 데이터베이스와 객체 지향 프로그래밍 언어 간의 호환되지 않는 데이터를 자동으로 매핑 (연결)해주는 프로그래밍 기법(방법)을 말합니다.
@@ -22,20 +22,6 @@ tags: [Spring, Springboot, Repository, DAO]
 - ORM 중에서 java를 위한 프레임워크 입니다.
 - JPA가 정의한 API를 실제로 구현한 구현체입니다.
 
-**Repository**<br>
- - **데이터베이스의 테이블보다는 자바애플리케이션 상 객체(Domain)에 집중합니다.이 객체의 수명등 상태관리도 하고 (이 객체 기반으로 데이터베이스의 테이블을 동기화 시킨다고 생각하시면 됩니다)**
- - Java 기반 애플리케이션과 데이터베이스를 properties 나 yaml 파일 같은 설정파일을 통해 연결합니다.(이때 JPA의 구현체인 Hibernate를 이용합니다)
- - **Hibernate라는 프레임워크를 사용하기 때문에 sql 쿼리를 직접 만들지 않고 이미 만들어져 있는 데이터액세스함수(CRUD 쿼리 같은..)를 사용할 수 있습니다.(실사용시에는 Hibernate를 좀 더 편하게 쓸 수 있게끔 하는 Spring Data JPA 의존성을 추가해서 사용합니다!)**
- 
- 
-**DAO(Data Access Object)**<br>
- - Repository와 마찬가지로 데이터베이스의 데이터에 접근하기 위해 생성하는 객체입니다.
- - **주 목적은 비즈니스로직과 데이터액세스로직을 분리 시키는 것입니다.**
- - **자바애플리케이션 상 객체(Domain)보다 데이터베이스의 테이블에 집중한다고 볼 수 있습니다.(이 테이블을 조작하고 Domain이 변화를 감지해서 동기화된다고 보시면 될 것 같습니다)**
- - Repository와 달리 클래스에서 소스코드로 DB와 연결할 수 있습니다.
- - **JPA를 구현한 프레임워크를 사용하지 않기 때문에 직접 데이터액세스함수를 짜야합니다.**
- 
-
 **JDBC(Java Database Connectivity)**<br>
  - Java 기반 애플리케이션의 데이터를 데이터베이스에 저장 및 업데이트하거나, 데이터베이스에 저장된 데이터를 Java에서 사용할 수 있도록 하는 자바 API이다.
 
@@ -47,11 +33,29 @@ tags: [Spring, Springboot, Repository, DAO]
  - 클라이언트(프론트엔드) 층이 요구하는 데이터 형식에 맞게끔 Domain을 가공시켜 (또는 그대로) 실제 응답으로 전달할 객체. 물론 프론트에서 데이터를 백으로 보낼 때도 사용합니다. 그래서 일반적인 메서드는 없고 필드속성(멤버변수)과 getter 와 setter만 가지고 있습니다.
  - DTO 와 VO를 혼용해서 많이 쓰지만 정확히 따지면 VO는 readonly 속성이라고 생각하시면 됩니다.
  
+<br>
+<br>
+
 ---
+
+<br>
+
+**Repository**<br>
+ - **데이터베이스의 테이블보다는 자바애플리케이션 상 객체(Domain)에 집중합니다.이 객체의 수명등 상태관리도 하고 이 객체 기반으로 데이터베이스의 테이블을 동기화 시킨다고 생각하시면 됩니다**
+ - Java 기반 애플리케이션과 데이터베이스를 properties 나 yaml 파일 같은 설정파일을 통해 연결합니다.(이때 JPA의 구현체인 Hibernate를 이용합니다)
+ - **Hibernate라는 프레임워크를 사용하기 때문에 sql 쿼리를 직접 만들지 않고 이미 만들어져 있는 데이터액세스함수(CRUD 쿼리 같은..)를 사용할 수 있습니다.(실사용시에는 Hibernate를 좀 더 편하게 쓸 수 있게끔 하는 Spring Data JPA 의존성을 추가해서 사용합니다!)**
+ 
+ 
+**DAO(Data Access Object)**<br>
+ - Repository와 마찬가지로 데이터베이스의 데이터에 접근하기 위해 생성하는 객체입니다.
+ - **주 목적은 비즈니스로직과 데이터액세스로직을 분리 시키는 것입니다.**
+ - **자바애플리케이션 상 객체(Domain)보다 데이터베이스의 테이블에 집중한다고 볼 수 있습니다.(이 테이블을 조작하고 Domain이 변화를 감지해서 동기화된다고 보시면 될 것 같습니다)**
+ - Repository와 달리 클래스에서 소스코드로 DB와 연결할 수 있습니다.
+ - **JPA를 구현한 프레임워크를 사용하지 않기 때문에 직접 데이터액세스함수를 짜야합니다.**
+
 
  >
 ## 요약<br>
-위 개념 중에서 다음과 같은 것들은 비교를 통해서 이해하시면 좋습니다.
 + **JPA 와 Hibernate: JPA** 표준을 구현한 구현체가 Hibernate(프레임워크)입니다.
 + **DAO 와 Repository**: 모두 데이터 액세스 패턴입니다만,
   1. DAO는 데이터베이스에 접근하는 로직과 비즈니스 로직을 완전히 분리 시키는걸 목표로 하는데 Repository는 객체에 초점을 두고 집중하여 객체 생성주기등도 관리하며 비즈니스 로직도 함께 다룹니다.
@@ -59,27 +63,39 @@ tags: [Spring, Springboot, Repository, DAO]
   3. Repository는 Hibernate(프레임워크) 기반이기 때문에 많은 표준화된 메서드   와 기능을 사용할 수 있습니다.(예를 들면 만들어져 있는 CRUD sql 쿼리등)
 + **DTO 와 Domain**: 데이터베이스의 테이블과 동일한 내용을 객체(Domain)로 만들어  따로 보관을 하면서, 프론트와 백에서 데이터를 주고 받을 때 이 Domain을 그대로 보내도 되지만 적절한 형태에 맞게끔 가공해서 주고 받을 수 있는데 이렇게 가공한   것을 DTO라고 생각하시면 됩니다.
 
+<br>
+<br>
 
 ---
 
+<br>
+<br>
+
 
 ![](https://velog.velcdn.com/images/chjw147/post/487b42d1-852d-4220-a097-297895eedf93/image.png)
+
+<br>
 
 
 억지로(?) JPA를 이용해 연결하고 DAO를 사용하거나
 SQLMapper를 이용해 연결하고 Repository를 사용할 수도 있지만
 구조를 빨간색 원 이나 파란색 원의 흐름으로 설계하는게 좋습니다.
 
+<br>
+
 >
 **사실 JPA 구현체를 이용해서 데이터베이스의 데이터에 액세스한다면 클래스 이름을 DAO 라고 하더라도 알맹이는 Repository 라고 생각해서 Repository 디자인 패턴이지 않나 싶습니다.
 반대로
 SQLMapper(예를들어 Mybatis)를 이용해서 데이터에 액세스한다면 Repository라고 이름을 짓더라도 DAO 디자인패턴 이라고 봅니다.**
 
+<br>
+<br>
+
 ---
 
+<br>
 
-
-### DAO (Data Access Object) 패턴
+## DAO (Data Access Object) 패턴
 클래스 내부에서 연결 했을 경우
 
 ```java
@@ -189,9 +205,14 @@ public class UserDAOImpl implements UserDAO {
     }
 }
 ```
+<br>
+<br>
+
 ---
 
-### Repository 패턴
+<br>
+
+## Repository 패턴
 
 Repository 패턴에서는 데이터베이스 연결이 주로 외부 설정 파일에 의해 관리됩니다. 여기서는 Spring Data JPA와 같은 프레임워크를 사용하는 예시를 들어보겠습니다.
 
