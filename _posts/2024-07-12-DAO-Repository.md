@@ -7,6 +7,8 @@ categories: Spring
 tags: [Spring, Springboot, Repository, DAO]
 ---
 
+## 필요한 기초 지식
+
 **ORM(Object Relational Mapping)**<br>
  - 관계형 데이터베이스와 객체 지향 프로그래밍 언어 간의 호환되지 않는 데이터를 자동으로 매핑 (연결)해주는 프로그래밍 기법(방법)을 말합니다.
 
@@ -48,7 +50,7 @@ tags: [Spring, Springboot, Repository, DAO]
 ---
 
  >
-## &lt;요약&gt;
+## 요약<br>
 위 개념 중에서 다음과 같은 것들은 비교를 통해서 이해하시면 좋습니다.
 + **JPA 와 Hibernate: JPA** 표준을 구현한 구현체가 Hibernate(프레임워크)입니다.
 + **DAO 와 Repository**: 모두 데이터 액세스 패턴입니다만,
@@ -187,6 +189,7 @@ public class UserDAOImpl implements UserDAO {
     }
 }
 ```
+---
 
 ### Repository 패턴
 
