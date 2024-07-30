@@ -226,10 +226,3 @@ public class SpringRestDocsTest {
     ```bash
     http://localhost:8080/docs/index.html
     ```
-
----
-
-읽어주셔서 감사합니다. 😊 
-
-__Reference__  
-ChatGPT - OpenAI
