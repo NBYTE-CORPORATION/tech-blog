@@ -7,7 +7,7 @@ categories: Spring
 tags: [OpenAPI, Annotation, 어노테이션, Spring, Springboot, REST API, 문서 자동화]
 ---
 
-Spring에서의 OpenAPI 어노테이션은 주로 Springdoc OpenAPI 라이브러리를 사용하여 API 문서를 자동으로 생성할 때 사용되며, API 문서화할 때 큰 역할을 합니다. 이번 포스트에서는 OpenAPI의 주요 어노테이션에 대해 설펴보겠습니다.
+Spring에서의 OpenAPI 어노테이션은 주로 Springdoc OpenAPI 라이브러리를 사용하여 API 문서를 자동으로 생성할 때 사용되며, API 문서화할 때 큰 역할을 합니다. 이번 포스트에서는 OpenAPI의 주요 어노테이션에 대해 살펴보겠습니다.
 
 ## @Operation
 ---
