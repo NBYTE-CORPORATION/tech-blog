@@ -114,7 +114,15 @@ tags: [Spring, Springboot, Flow, MVC]
 
 **pink square : 디스패처 서블릿 소속**<br>
 **puple square : 톰캣(WAS) 소속** <br>
-**yellow cirlce : 스프링 컨테이너 소속**
+**yellow cirlce : 스프링 컨테이너 소속(servlet-context 기반 스프링 컨테이너)**
+
+> **좀 더 자세히 말하자면 일반적으로** <br>
+**스프링은 2개의 스프링 컨테이너(root-context 기반, servlet-context기반)를 사용하고** <br>
+**스프링 부트는 2가지가 통합된 하나의 스프링 컨테이너를 사용합니다.** <br>
+**root-context 기반 컨테이너 : ServiceImpl, VO, DAO** <br>
+**servlet-context 기반 컨테이너 : Controller, HandlerMapping, ViewResolver 등**
+<br>
+**[참고](https://techblog.nbyte.kr/spring/2024/07/08/Springboot-Flow.html)**
 
 
 **디스패처 서블릿은 톰캣 서버 안에 포함되어 있다고 생각하시면 됩니다.**
