@@ -218,3 +218,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+# 증분 빌드 활성화    
+incremental: true
