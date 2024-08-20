@@ -18,8 +18,7 @@
     ul {
       border-left: 1px solid #e9ecef;
       $indent: calc($base-font-size / 4);
-      //$active-bgcolor: #ecebec;
-      $active-color: #6DA7E3;
+      $active-bgcolor: #ecebec;
 
       @for $i from 2 to 7 {
         .h-h#{$i} {
