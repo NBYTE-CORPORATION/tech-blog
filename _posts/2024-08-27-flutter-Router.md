@@ -7,9 +7,9 @@ categories: Flutter
 tags: [Flutter]
 ---
 
-## 라우트 관리
+# 라우트 관리
 
-### context 없이 사용
+## context 없이 사용
 
 MaterialApp 앞에 "Get"을 추가해서 GetMaterialApp으로 변경합니다.
 
@@ -45,7 +45,7 @@ GetMaterialApp( // Before: MaterialApp(
 
 
 
-### 사용하는 방법
+## 사용하는 방법
 
 pubspec.yaml 파일에 추가
 
@@ -68,7 +68,7 @@ GetMaterialApp( // 이전: MaterialApp(
 ```
 
 
-### 이름없는 라우트 탐색
+## 이름없는 라우트 탐색
 
 새 화면으로 이동
 
@@ -135,7 +135,7 @@ Get.to(HomePage());
 
 ```
 
-### 이름없는 라우트 탐색
+## 이름있는 라우트 탐색
 
 nextScreen으로 이동
 
@@ -424,9 +424,9 @@ class Third extends StatelessWidget {
 ```
 
 
-### context없이 탐색
+## context없이 탐색
 
-#### SnackBars
+### SnackBars
 
 Flutter로 간단한 SnackBar를 사용하려면 Scaffold의 context가 반드시 주어지거나 Scaffold에 GlobalKey를 추가해서 사용해야만 합니다.
 
@@ -508,7 +508,7 @@ Get.snackbar(
 
 기존 스낵바를 선호하거나 한 줄만 추가하는 것을 포함하여 처음부터 커스텀하려는 경우(Get.snackbar는 필수로 제목과 메시지를 사용함) 다음을 사용할 수 있습니다. Get.snackbar가 빌드된 RAW API를 제공하는Get.rawSnackbar ();.
 
-#### Dialogs
+### Dialogs
 
 dialog 열기
 
@@ -531,7 +531,7 @@ showGeneralDialog 대신에 Get.generalDialog를 사용할 수 있습니다.
 cupertinos를 포함한 다른 모든 Flutter 대화 상자 위젯의 경우 context 대신 Get.overlayContext를 사용하고 코드의 어느 곳에서나 열 수 있습니다. 오버레이를 사용하지 않는 위젯의 경우 Get.context를 사용할 수 있습니다. 이 두 context는 탐색 context 없이 inheritedWidget이 사용되는 경우를 제외하고 99%의 경우에 UI의 context를 대체하여 동작합니다.
 
 
-#### BottomSheets
+### BottomSheets
 
 Get.bottomSheet는 showModalBottomSheet와 같지만 context가 필요 없습니다.
 
@@ -559,7 +559,7 @@ Get.bottomSheet(
 ```
 
 
-### 중첨된 탐색
+## 중첩된 탐색
 
 GetX는 Fultter의 중첩된 탐색을 더 쉽게 만듭니다. context가 필요 없고 Id로 탐색 스택을 찾을 수 있습니다.
 
